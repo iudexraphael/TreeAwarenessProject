@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TreeAwareness.View.AddMessage" BackgroundImageSource="flowergarden.jpg"
+             Title="Plant your thoughts">
+    <ContentPage.Content>
+        <StackLayout Margin="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+
+            <Entry x:Name="txtcommentname" Placeholder="Guest..."  TextColor="Green" BackgroundColor="OliveDrab" PlaceholderColor="White"/>
+            <Editor x:Name="txtcomment" Placeholder="Share your thoughts..." AutoSize="TextChanges" BackgroundColor="OliveDrab" TextColor="White" PlaceholderColor="White"/>
+            <Entry x:Name="TreePick" Placeholder="Plant..."  BackgroundColor="OliveDrab" TextColor="White" PlaceholderColor="White"/>
+
+            <!--      <Picker x:Name="fruitview"
+        Title="Plant"
+        TitleColor="BlueViolet"
+                     SelectedItem="{Binding SelectedTree}">
+                
+                
+              
+                <Picker.ItemsSource>
+                    <x:Array Type ="{x:Type x:String}">
+                        <x:String>ataulfo.jpg</x:String>
+                        <x:String>francsimango.jpg</x:String>
+                        <x:String>tommyatkins.jpg</x:String>
+                     
+
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label x:Name ="TreePick" Text="{Binding SelectedTree.Image}" />
+-->
+
+            <Button x:Name="btnSaveUpdate" Text="Save" Clicked="btnSaveUpdate_Clicked" TextColor="White" BackgroundColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

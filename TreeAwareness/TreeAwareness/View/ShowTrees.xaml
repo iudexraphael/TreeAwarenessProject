@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TreeAwareness.View.ShowTrees" BackgroundColor="DarkOliveGreen"
+               Title="Greenhouse">
+    <ContentPage.Content>
+        <StackLayout Margin="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="DarkOliveGreen">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                   
+                </Grid.ColumnDefinitions>
+                <Button Text="Add New Tree" x:Name="btnAddRecord"  HorizontalOptions="Start"  Clicked="btnAddRecord_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button Text="Catalogue"  x:Name="btnACatalogue"  HorizontalOptions="Start"  Clicked="btnACatalogue_Clicked" Grid.Row="0" Grid.Column="1" />
+            </Grid>
+            
+            <Grid BackgroundColor="MediumSeaGreen" Padding="15" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Tree Name"  FontAttributes="Bold" HorizontalTextAlignment="Start"  Grid.Row="0" Grid.Column="0" />
+                <Label Text="Traits" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Location" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2" />
+            </Grid>
+            <ListView x:Name="lstData" HasUnevenRows="True" ItemSelected="lstData_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Name}"  Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="{Binding InitialIdentification}"   Grid.Row="0" Grid.Column="1"/>
+                                    <Label Text="{Binding Location}" Grid.Row="0" Grid.Column="2" />
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TreeAwareness.View.FirstHomePage"  Title="Yggdrassil">
+    <ContentPage.Content>
+        <Grid BackgroundColor="ForestGreen">
+           
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="AliceBlue" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                       
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <Grid>
+                <Image Source="sb4345mttum41.jpg" VerticalOptions="Center" Aspect="AspectFit"/>
+            </Grid>
+            <ScrollView Grid.Row="1">
+                <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+                    <Label FontSize="22">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Yggdrassil" FontAttributes="Bold" FontSize="22" TextColor="White" />
+                                    <Span Text=" " />
+                               
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Orbiting Earth in the spaceship, I saw how beautiful our planet is." TextColor="White"/>
+                                    <Span Text=" " />
+                                    <Span Text=" People, let us preserve and increase this beauty, not destroy it!" FontAttributes="Italic" TextColor="White" />
+                                    <Span Text="." />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+
+                                    <Span Text="-Yuri Gagarin" FontAttributes="Bold"  TextColor="WhiteSmoke"/>
+                                
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Grid x:Name="MainGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="0,50,0,0" Text="Garden of Words" Clicked="MessageNextPage"  Grid.Row="0"></Button>
+                        <Button Margin="0,10,0,0" Text="Great Greenhouse" Clicked="ProjNextPage" Grid.Row="1"></Button>
+                        <Button Margin="0,10,0,0" Text="Plant your thoughts"  Clicked="PlantAtGardenPage" Grid.Row="2" />
+                        <Button Margin="0,10,0,0" Text="About"  Clicked="AboutNextPage" Grid.Row="3"></Button>
+                        <Image ></Image>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
